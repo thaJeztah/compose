@@ -12,8 +12,8 @@ require (
 	github.com/containerd/platforms v0.2.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/distribution/reference v0.6.0
-	github.com/docker/buildx v0.17.0
-	github.com/docker/cli v27.2.1+incompatible
+	github.com/docker/buildx v0.17.1
+	github.com/docker/cli v27.2.2-0.20240913085431-48a2cdff970d+incompatible
 	github.com/docker/cli-docs-tool v0.8.0
 	github.com/docker/docker v27.2.1+incompatible
 	github.com/docker/go-connections v0.5.0
