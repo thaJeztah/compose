@@ -9,7 +9,7 @@ require (
 	github.com/acarl005/stripansi v0.0.0-20180116102854-5a71ef0e047d
 	github.com/buger/goterm v1.0.4
 	github.com/compose-spec/compose-go/v2 v2.6.4
-	github.com/containerd/containerd/v2 v2.1.1
+	github.com/containerd/containerd/v2 v2.1.2
 	github.com/containerd/platforms v1.0.0-rc.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/distribution/reference v0.6.0
@@ -56,7 +56,7 @@ require (
 	golang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0
 	golang.org/x/sync v0.14.0
 	golang.org/x/sys v0.33.0
-	google.golang.org/grpc v1.72.1
+	google.golang.org/grpc v1.72.2
 	gopkg.in/yaml.v3 v3.0.1
 	gotest.tools/v3 v3.5.2
 	tags.cncf.io/container-device-interface v1.0.1
