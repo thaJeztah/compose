@@ -192,7 +192,7 @@ func TestBuildContainerMountOptions(t *testing.T) {
 }
 
 func TestDefaultNetworkSettings(t *testing.T) {
-	t.Run("returns the network with the highest priority when service has multiple networks", func(t *testing.T) {
+	t.Run("returns the network with the highest priority as primary when service has multiple networks", func(t *testing.T) {
 		service := composetypes.ServiceConfig{
 			Name: "myService",
 			Networks: map[string]*composetypes.ServiceNetworkConfig{
@@ -222,7 +222,8 @@ func TestDefaultNetworkSettings(t *testing.T) {
 		networkMode, networkConfig, err := defaultNetworkSettings(&project, service, 1, nil, true, "1.44")
 		assert.NilError(t, err)
 		assert.Equal(t, string(networkMode), "myProject_myNetwork2")
-		assert.Check(t, cmp.Len(networkConfig.EndpointsConfig, 1))
+		assert.Check(t, cmp.Len(networkConfig.EndpointsConfig, 2))
+		assert.Check(t, cmp.Contains(networkConfig.EndpointsConfig, "myProject_myNetwork1"))
 		assert.Check(t, cmp.Contains(networkConfig.EndpointsConfig, "myProject_myNetwork2"))
 	})
 
